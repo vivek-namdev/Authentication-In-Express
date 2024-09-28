@@ -53,7 +53,7 @@ app.get("/me", function(req, res) {
     const token = req.body.token
     const decodedInformation = jwt.verify(token, JWT_SECRET);
     const username = decodedInformation;
-    
+
     let foundUser = null
 
     for(let i=0; i<users.length; i++) {
